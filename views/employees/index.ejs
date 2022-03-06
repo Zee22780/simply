@@ -1,5 +1,13 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+<section>
+  <h2>All Employees</h2>
+  <ul>
+    <% employees.forEach(employee => { %>
+      <a href="/employees"><%= employee.eName %></a>
+    <% }) %> 
+  </ul>
+</section>
 
 <%- include('../partials/footer') %>
