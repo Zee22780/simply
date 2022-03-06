@@ -9,7 +9,7 @@ const employeeSchema = new Schema({
   department: String,
   location: String,
   mName: String,
-  eId: {type: Schema.Types.ObjectId, ref: "Profile"}
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 })
 
 const Employee = mongoose.model('Employee', employeeSchema)

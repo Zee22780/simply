@@ -1,0 +1,27 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/public/stylesheets/employees/new.css">
+<%- include('../partials/nav') %>
+
+<section>
+  <h2>Add Employee:</h2>
+  <form action="/employees" method="POST">
+    <label>Employee Name:
+      <input type="text" name="eName" autocomplete="off"><br>
+    </label>
+    <label>Start Date:
+      <input type="date" name="startDate" autocomplete="off"><br>
+    </label>
+    <label>Title:
+      <input type="text" name="title" autocomplete="off"><br>
+    </label>
+    <label>Location:
+      <input type="text" name="location" autocomplete="off"><br>
+    </label>
+    <label>Manager Name:
+      <input type="text" name="mName" autocomplete="off"><br>
+    </label>
+    <button type="submit">submit employee</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>
