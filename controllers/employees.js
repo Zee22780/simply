@@ -29,8 +29,24 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Employee.findById(req.params.id) 
+  .populate("owner")
+  .then(employee => {
+    console.log(employee)
+    res.render('employees/show', {
+      employee,
+      title: "show"
+    })
+  })
+  .catch(err => {
+    res.redirect("/employees")
+  })
+}
+
 export {
   index,
   newEmployee as new,
   create,
+  show
 }

@@ -5,7 +5,7 @@
   <h2>All Employees</h2>
   <ul>
     <% employees.forEach(employee => { %>
-      <a href="/employees"><%= employee.eName %></a>
+      <a href="/employees/<%= employee._id %>"><%= employee.eName %></a><br>
     <% }) %> 
   </ul>
 </section>
