@@ -11,14 +11,17 @@
       >
     </div>
   <% } %>
-  <h1>It's <%= isSelf ? "you" : self.name %>!</h1>
+  <h1>Hi <%= self.name %>!</h1>
 <section>
-  <h2>All Employees</h2>
-  <ul>
+  <form action="">
+  <h2>Your Direct Reports:</h2>
+  <select name="" id="">
     <% self.employees.forEach(employee => { %>
-      <a href="/employees/<%= employee._id %>"><%= employee.eName %></a><br>
+    <option value="<%= employee._id %>"><%= employee.eName %>
+    </option> 
     <% }) %> 
-  </ul>
+  </select>
+  </form>
 </section>
 </main>
 <%- include('../partials/footer') %>
