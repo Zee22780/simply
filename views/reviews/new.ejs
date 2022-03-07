@@ -1,0 +1,30 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<h2>Performance Review Form</h2>
+
+<form 
+  id="add-review-form"
+  action="/profiles"
+  method="POST"
+>
+
+  <label for="qOne-textarea">What is awesome about this employee?</label><br>
+    <textarea name="qOne" id="qOne-textarea"></textarea><br>
+
+  <label for="qTwo-textarea">What can this employee improve?</label><br>
+    <textarea name="qTwo" id="qTwo-textarea"></textarea><br>
+
+  <label for="rating-select">Overall Rating (Choose 1-5):</label><br>
+  <select name="rating" id="rating-select">
+    <option value="1">1 - Needs Improvement</option>
+    <option value="2">2 - Below Expectations </option>
+    <option value="3" selected>3 - Meets Expectations </option>
+    <option value="4">4 - Exceeds Expectations </option>
+    <option value="5">5 - Far Exceeds Expectations </option>
+  </select><br><br>
+  <button type="submit">Submit Performance Review</button>
+</form>
+
+
+<%- include('../partials/footer') %>
