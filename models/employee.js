@@ -2,6 +2,12 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const reviewSchema = new Schema({
+  qOne: String,
+  qTwo: String,
+  rating: {type: Number, min: 1, max: 5},
+})
+
 const employeeSchema = new Schema({
   eName: String,
   startDate: Date,
@@ -9,6 +15,7 @@ const employeeSchema = new Schema({
   department: String,
   location: String,
   mName: String,
+  perfRev: [reviewSchema],
   owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 })
 

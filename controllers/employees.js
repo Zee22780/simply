@@ -1,4 +1,5 @@
 import { Employee } from "../models/employee.js"
+import { Profile } from "../models/profile.js"
 
 function index(req, res) {
   Employee.find({})
@@ -21,7 +22,12 @@ function create(req, res) {
   req.body.owner = req.user.profile._id
   Employee.create(req.body)
   .then(employee => {
-    res.redirect('/employees')
+    Profile.findById(req.user.profile._id)
+    .then(profile => {
+      profile.employees.push(employee._id)
+      profile.save()
+      res.redirect('/employees')
+    })
   })
   .catch(err => {
     console.log(err)

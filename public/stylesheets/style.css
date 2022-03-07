@@ -34,8 +34,7 @@ nav {
 
 main {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
   flex-direction: column;
 }
 
