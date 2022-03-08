@@ -4,10 +4,27 @@
 </head>
 <body>
   <nav>
-    <a href="/profiles">My Profile</a>
-    <a href="/employees/new">Add Employee</a>
-    <a href="/reviews/new">New Review</a>
-    <a href="/employees">All Employees</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-color: #ffffff">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/profiles">My Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/employees/new">Add Employee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/employees">All Employees</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
     
     <% if (user) { %>
       <a href="/auth/logout">

@@ -18,5 +18,5 @@ function show(req, res) {
 }
 
 export {
-  show,
+  show
 }

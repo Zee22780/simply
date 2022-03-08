@@ -8,6 +8,12 @@
   action="/profiles"
   method="POST"
 >
+<select>
+  <% self.employees.forEach(employee => { %>
+  <option value="<%= employee._id %>"><%= employee.eName %>
+  </option>
+  <% }) %>
+  </select><br>
 
   <label for="qOne-textarea">What is awesome about this employee?</label><br>
     <textarea name="qOne" id="qOne-textarea"></textarea><br>

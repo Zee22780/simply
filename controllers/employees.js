@@ -50,6 +50,15 @@ function show(req, res) {
   })
 }
 
+function createReview(req, res) {
+  Employee.findById(req.params.id, function(err, employee) {
+    employee.perfRev.push(req.body)
+    employee.save(function(err){
+      res.redirect(`/profile/${profile._id}`)
+    })
+  })
+}
+
 export {
   index,
   newEmployee as new,
