@@ -73,10 +73,18 @@ function createReview(req, res) {
     })
 }
 
+function deleteEmployee(req, res) {
+  Employee.findByIdAndDelete(req.params.id)
+  .then(()=> {
+    res.redirect('/employees')
+  })
+}
+
 export {
   index,
   newEmployee as new,
   create,
   show,
-  createReview
+  createReview,
+  deleteEmployee as delete
 }

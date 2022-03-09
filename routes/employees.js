@@ -15,6 +15,9 @@ router.get('/:id', isLoggedIn, employeesCtrl.show)
 // POST localhost:3000/employees
 router.post('/', isLoggedIn, employeesCtrl.create)
 
+// DELETE localhost:3000/employees/:id
+router.delete('/:id', employeesCtrl.delete)
+
 export {
   router
 }

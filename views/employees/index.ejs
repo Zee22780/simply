@@ -5,9 +5,14 @@
   <h2>All Employees</h2>
   <ul>
     <% employees.forEach(employee => { %>
-      <a href="/employees/<%= employee._id %>"><%= employee.eName %></a><br>
+      <a href="/employees/<%= employee._id %>"><%= employee.eName %></a>
+      <form method="POST" action="/employees/<%= employee._id %>?_method=DELETE">
+        <button type="submit">Delete This Employee</button>
+      </form>
+      <br>
     <% }) %> 
-  </ul>
+  
+</ul>
 </section>
 
 <%- include('../partials/footer') %>
