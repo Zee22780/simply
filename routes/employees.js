@@ -15,7 +15,6 @@ router.get('/:id', isLoggedIn, employeesCtrl.show)
 // POST localhost:3000/employees
 router.post('/', isLoggedIn, employeesCtrl.create)
 
-
 export {
   router
 }

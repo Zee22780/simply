@@ -20,6 +20,13 @@
           <td><%= employee.title %></td>
           <td><%= employee.department %></td>
           <td><%= employee.location %></td>
+
+          <% employee.perfRev.forEach(review => { %>
+            <p><%= review.qOne %>Question One</p>
+            <p><%= review.qTwo %></p>
+            <p><%= review.rating %></p>
+            
+          <% }) %>
         </tr>
     </tbody>
   </table>
