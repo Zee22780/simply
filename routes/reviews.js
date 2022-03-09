@@ -6,10 +6,10 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router()
 
 // GET localhost:3000/reviews/new
-router.get('/new', reviewsCtrl.new)
+router.get('/new', isLoggedIn, reviewsCtrl.new)
 
 // POST localhost:3000/employees/:id
-router.post('/employees', employeesCtrl.createReview)
+router.post('/employees', isLoggedIn, employeesCtrl.createReview)
 
 export {
   router

@@ -6,11 +6,11 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router()
 
 // GET localhost:3000/employees
-router.get('/', employeesCtrl.index)
+router.get('/', isLoggedIn, employeesCtrl.index)
 // GET localhost:3000/employees/new
-router.get('/new', employeesCtrl.new)
+router.get('/new', isLoggedIn, employeesCtrl.new)
 // GET localhost:3000/employees/:id
-router.get('/:id', employeesCtrl.show)
+router.get('/:id', isLoggedIn, employeesCtrl.show)
 
 // POST localhost:3000/employees
 router.post('/', isLoggedIn, employeesCtrl.create)
