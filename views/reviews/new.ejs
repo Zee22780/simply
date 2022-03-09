@@ -8,7 +8,7 @@
   action="/reviews/employees"
   method="POST"
 >
-<select name="id">
+<select name="employeeId">
   <% self.employees.forEach(employee => { %>
   <option value="<%= employee._id %>"><%= employee.eName %>
   </option>

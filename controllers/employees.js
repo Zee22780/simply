@@ -63,14 +63,13 @@ function show(req, res) {
 // }
 
 function createReview(req, res) {
-  Employee.findById(req.body.id)
+  Employee.findById(req.body.employeeId)
     .then(employee => {
-      // employee.perfRev.push(req.body)
-      console.log('YYYYY', employee)
-      Employee.findByIdAndUpdate(req.body.id, {$push:{perfRev:req.body}}, {new: true})
-    })
-    .then(() => {
-      res.redirect(`/employees/${req.body.id}`)
+      employee.perfRev.push(req.body)
+      employee.save()
+      .then(()=> {
+        res.redirect(`/employees/${req.body.employeeId}`)
+      })
     })
 }
 
