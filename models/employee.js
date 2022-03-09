@@ -9,7 +9,10 @@ const reviewSchema = new Schema({
 })
 
 const employeeSchema = new Schema({
-  eName: String,
+  eName: {
+    type: String,
+    unique: true,
+  },
   startDate: Date,
   title: String,
   department: String,

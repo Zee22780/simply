@@ -5,10 +5,10 @@
 
 <form 
   id="add-review-form"
-  action="/profiles"
+  action="/reviews/employees"
   method="POST"
 >
-<select>
+<select name="id">
   <% self.employees.forEach(employee => { %>
   <option value="<%= employee._id %>"><%= employee.eName %>
   </option>

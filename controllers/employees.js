@@ -39,7 +39,7 @@ function show(req, res) {
   Employee.findById(req.params.id) 
   .populate("owner")
   .then(employee => {
-    console.log(employee)
+    console.log('hi employee', employee)
     res.render('employees/show', {
       employee,
       title: "show"
@@ -50,18 +50,34 @@ function show(req, res) {
   })
 }
 
+// function createReview(req, res) {
+//   console.log(req.body)
+//   Employee.find({eName: req.body.eName}, function(err, employee) {
+//     console.log(employee)
+//     // employee.perfRev.push(req.body)
+//     console.log('hello out there', employee._id)
+//     employee.save(function(err){
+//       res.redirect(`/employees/${employee._id}`)
+//     })
+//   })
+// }
+
 function createReview(req, res) {
-  Employee.findById(req.params.id, function(err, employee) {
-    employee.perfRev.push(req.body)
-    employee.save(function(err){
-      res.redirect(`/profile/${profile._id}`)
+  Employee.findById(req.body.id)
+    .then(employee => {
+      // employee.perfRev.push(req.body)
+      console.log('YYYYY', employee)
+      Employee.findByIdAndUpdate(req.body.id, {$push:{perfRev:req.body}}, {new: true})
     })
-  })
+    .then(() => {
+      res.redirect(`/employees/${req.body.id}`)
+    })
 }
 
 export {
   index,
   newEmployee as new,
   create,
-  show
+  show,
+  createReview
 }

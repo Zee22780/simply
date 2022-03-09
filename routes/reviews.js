@@ -8,8 +8,8 @@ const router = Router()
 // GET localhost:3000/reviews/new
 router.get('/new', reviewsCtrl.new)
 
-// POST localhost:3000/profiles?
-router.post('/new', reviewsCtrl.createReview)
+// POST localhost:3000/employees/:id
+router.post('/employees', employeesCtrl.createReview)
 
 export {
   router
