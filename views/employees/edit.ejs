@@ -4,19 +4,19 @@
 <h1>Update Employee</h1>
 <form method="POST" action="/employees/<%= employee._id %>?_method=PUT">
 <label>Employee Name:
-  <input type="text" name="eName" autocomplete="off"><br>
+  <input type="text" value="<%= employee.eName %>" name="eName" autocomplete="off"><br>
 </label>
 <label>Start Date:
-  <input type="date" name="startDate" autocomplete="off"><br>
+  <input type="date" value="<%= employee.startDate %>" name="startDate" autocomplete="off"><br>
 </label>
 <label>Title:
-  <input type="text" name="title" autocomplete="off"><br>
+  <input type="text" value="<%= employee.title %>"name="title" autocomplete="off"><br>
 </label>
 <label>Department:
-  <input type="text" name="department" autocomplete="off"><br>
+  <input type="text" value="<%= employee.department %>"name="department" autocomplete="off"><br>
 </label>
 <label>Location:
-  <input type="text" name="location" autocomplete="off"><br>
+  <input type="text" value="<%= employee.location %>"name="location" autocomplete="off"><br>
 </label>
 <button type="submit">Update</button>
 </form>

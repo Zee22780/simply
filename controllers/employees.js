@@ -75,7 +75,7 @@ function edit(req, res) {
 }
 
 function update(req,res) {
-  Employee.findByIdAndUpdate(req.params.id)
+  Employee.findByIdAndUpdate(req.params.id, req.body)
   .then(() => {
     res.redirect("/employees")
   })
