@@ -1,6 +1,6 @@
 ## Simply Performance Management
 
-Simply is a simple performance management system designed for managers to tracking employee performance.
+Simply is a simple performance management system designed for managers to track employee performance.
 
 ---
 ## Check Out Simply 
@@ -36,7 +36,7 @@ The user can also view basic employee details from their profile page.
 
 ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
-![MONGOOSE](https://img.shields.io/badge/-Mongoose-inactive?logo=MongoDB&logoColor=white&style=flat-square)
+
 
 ___
 ## Ice Box

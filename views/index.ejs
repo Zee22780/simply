@@ -2,6 +2,7 @@
 <%- include('./partials/nav') %>
 
 <main>
+  <div id="welcome">
   <h1>Welcome <%= user ? user.profile.name : "Manager" %>, to The Simply Performance Management System</h1>
   <% if (user?.profile.avatar) { %>
     <div>
@@ -11,6 +12,7 @@
       />
     </div>
   <% } %>
+</div>
 </main>
 
 
