@@ -3,38 +3,37 @@
 
 <main>
   <div id="profile-container">
-  <div id="left">
-    <% if (self.avatar) { %>
-    <img 
-    class="self-avatar"
-    src="<%= self.avatar %>" 
-    alt="<%= self.name %> avatar"
-    >
-
-    <% } else{ %>
-      <img 
+    <div id="left">
+      <% if (self.avatar) { %>
+      <img id="profile-img"
       class="self-avatar"
-      src=" " 
+      src="<%= self.avatar %>" 
       alt="<%= self.name %> avatar"
       >
-    <% } %> 
-    <h1>Hi <%= self.name %>!</h1>
-  </div>
 
-  <div id="right">
-    <section>
-      <form>
-        <h2>Your Direct Reports:</h2>
-        <select name="" id="">
-          <% self.employees.forEach(employee => { %>
-            <option value="<%= employee._id %>"><%= employee.eName %>
-            </option> 
-            <% }) %> 
-          </select>
-        </form>
-      </section>
+      <% } else{ %>
+        <img 
+        class="self-avatar"
+        src=" " 
+        alt="<%= self.name %> avatar"
+        >
+      <% } %> 
+      <h1>Hi <%= self.name %>!</h1>
+    </div>
 
-  </div>
+    <div id="right">
+      <section>
+        <form>
+          <h2>Your Direct Reports:</h2>
+          <select name="" id="">
+            <% self.employees.forEach(employee => { %>
+              <option value="<%= employee._id %>"><%= employee.eName %>
+              </option> 
+              <% }) %> 
+            </select>
+          </form>
+        </section>
+    </div>
   </div>
 </main>
 
