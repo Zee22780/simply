@@ -50,18 +50,6 @@ function show(req, res) {
   })
 }
 
-// function createReview(req, res) {
-//   console.log(req.body)
-//   Employee.find({eName: req.body.eName}, function(err, employee) {
-//     console.log(employee)
-//     // employee.perfRev.push(req.body)
-//     console.log('hello out there', employee._id)
-//     employee.save(function(err){
-//       res.redirect(`/employees/${employee._id}`)
-//     })
-//   })
-// }
-
 function createReview(req, res) {
   Employee.findById(req.body.employeeId)
     .then(employee => {
