@@ -61,6 +61,26 @@ function createReview(req, res) {
     })
 }
 
+function edit(req, res) {
+  Employee.findById(req.params.id)
+  .then(employee => {
+    res.render("employees/edit", {
+      employee
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/employees')
+  })
+}
+
+function update(req,res) {
+  Employee.findByIdAndUpdate(req.params.id)
+  .then(() => {
+    res.redirect("/employees")
+  })
+}
+
 function deleteEmployee(req, res) {
   Employee.findByIdAndDelete(req.params.id)
   .then(()=> {
@@ -74,5 +94,7 @@ export {
   create,
   show,
   createReview,
+  edit,
+  update,
   deleteEmployee as delete
 }

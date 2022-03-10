@@ -30,11 +30,8 @@
         </tr>
     </tbody>
   </table>
-  <form method="POST" action="/employees/<%= employee._id %>"?_method="PUT">
-    <button type="submit">Update This Employee</button>
-  </form>
 </section>
-
+<a href="/employees/<%= employee._id %>/edit">Update Employee</a>
 
 
 <%- include('../partials/footer') %>
