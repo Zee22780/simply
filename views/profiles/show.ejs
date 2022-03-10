@@ -23,15 +23,23 @@
 
     <div id="right">
       <section>
-        <form>
+        <h1>Welcome to your Simply profile.</h1><br> 
+        <p>Here you can view a list of employees you manage. Managing performance is extremely important. Simply helps you do all that you need to do to be the best manager you can be. You can do lot's of amazing things on Simply using the navigation bar up top: <br><br>
+          <ul>
+            <li>Add an Employee</li>
+            <li>View All Employees</li>
+            <li>Write a Review</li>
+          </ul>
+        </p><br>
+      </section>
+
+      <section>
           <h2>Your Direct Reports:</h2>
-          <select name="" id="">
+          <ul>
             <% self.employees.forEach(employee => { %>
-              <option value="<%= employee._id %>"><%= employee.eName %>
-              </option> 
-              <% }) %> 
-            </select>
-          </form>
+              <li><%= employee.eName %></li>
+            <% }) %> 
+          </ul>
         </section>
     </div>
   </div>

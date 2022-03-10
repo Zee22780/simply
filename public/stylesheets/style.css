@@ -49,6 +49,7 @@ h1 {
 #profile-container {
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 #welcome{
@@ -66,13 +67,22 @@ h1 {
 #left {
   width: 40%;
   height: 100%;
+  
+  
 }
 
 #left, h1 {
   text-align: center;
+  font-size: 4rem;
 }
 
 #right {
   width: 60%;
   height: 100%;
+  padding: 40px;
+  font-size: 2rem;
+}
+
+#right > h2 {
+  font-size: 3rem;
 }
