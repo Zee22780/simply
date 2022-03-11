@@ -1,18 +1,20 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
-  <h2>All Employees</h2>
-  <ul>
+
+  <h2 id="all-employees-header">All Employees</h2>
+  <div id="all-cards">
     <% employees.forEach(employee => { %>
+      <div class="card">
+        <img class="placeholder-img" src="/images/placeholder-image-person-jpg.jpeg" class="card-img-top" alt="placeholder img">
       <a href="/employees/<%= employee._id %>"><%= employee.eName %></a>
       <form method="POST" action="/employees/<%= employee._id %>?_method=DELETE">
-        <button type="submit">Delete This Employee</button>
+        <button id="delete-button" type="submit">Delete This Employee</button>
       </form>
+    </div>
       <br>
     <% }) %> 
-  
-</ul>
-</section>
+  </div>
+
 
 <%- include('../partials/footer') %>

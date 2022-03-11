@@ -3,25 +3,29 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h2>Add Employee:</h2>
-  <form action="/employees" method="POST">
-    <label>Employee Name:
-      <input type="text" name="eName" autocomplete="off"><br>
-    </label>
-    <label>Start Date:
-      <input type="date" name="startDate" autocomplete="off"><br>
-    </label>
-    <label>Title:
-      <input type="text" name="title" autocomplete="off"><br>
-    </label>
-    <label>Department:
-      <input type="text" name="department" autocomplete="off"><br>
-    </label>
-    <label>Location:
-      <input type="text" name="location" autocomplete="off"><br>
-    </label>
-    <button type="submit">submit employee</button>
+  <h2 id="add-employee-header">Add Employee:</h2>
+
+  <form id="add-employee-form" action="/employees" method="POST">
+    <div class="mb-3">
+      <label for="formGroupExampleInput" class="form-label">Employee Name:</label>
+      <input type="text" name="eName" autocomplete="off" class="form-control" id="formGroupExampleInput" placeholder="Employee Name">
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label">Start Date:</label>
+      <input type="date" name="startDate" autocomplete="off" class="form-control" id="formGroupExampleInput2" placeholder="Start Date">
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label">Department:</label>
+      <input type="text" name="department" autocomplete="off" class="form-control" id="formGroupExampleInput2" placeholder="Department">
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label">Location:</label>
+      <input type="text" name="location" autocomplete="off" class="form-control" id="formGroupExampleInput2" placeholder="Location">
+    </div>
+    <button id="add-employee-button" type="submit">submit employee</button>
   </form>
 </section>
+
+
 
 <%- include('../partials/footer') %>

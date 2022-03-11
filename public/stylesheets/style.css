@@ -31,9 +31,9 @@ body {
   width: 15%;
 }
 
-a {
+/* a {
   color: #ffffff;
-}
+} */
 
 nav {
   background-color: white;
@@ -46,16 +46,18 @@ h1 {
   font-size: 4rem;
 }
 
-#profile-container {
-  display: flex;
-  flex-wrap: wrap;
-  
-}
-
 #welcome{
   text-align: center;
   margin: 40px;
   align-content: center;
+}
+
+/* PROFILE PAGE */
+
+#profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  
 }
 
 #profile-img {
@@ -67,8 +69,6 @@ h1 {
 #left {
   width: 40%;
   height: 100%;
-  
-  
 }
 
 #left, h1 {
@@ -83,6 +83,57 @@ h1 {
   font-size: 2rem;
 }
 
-#right > h2 {
+#profile-bottom-header {
   font-size: 3rem;
+  text-align: center;
 }
+
+/* ADD EMPLOYEE PAGE */
+
+#add-employee-header {
+  font-size: 4rem;
+  text-align: center;
+  margin: 20px;
+}
+
+#add-employee-form {
+  font-size: 2rem;
+  justify-content: center;
+  align-content: center;
+  margin: 0 200px 0 200px;
+}
+
+#add-employee-button {
+  font-size: 1.2rem;
+}
+
+/* ALL EMPLOYEES PAGE */
+#all-employees-header {
+  font-size: 4rem;
+  text-align: center;
+}
+
+#all-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  height: 215px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+.card > a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* NEW REVIEW PAGE */
+
+
+
+/* EMPLOYEE SHOW PAGE */
