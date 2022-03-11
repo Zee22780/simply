@@ -8,29 +8,36 @@
   action="/reviews/employees"
   method="POST"
 >
-<select name="employeeId">
-  <% self.employees.forEach(employee => { %>
-  <option value="<%= employee._id %>"><%= employee.eName %>
-  </option>
-  <% }) %>
-  </select><br>
-
-  <label for="qOne-textarea">What is awesome about this employee?</label><br>
-    <textarea name="qOne" id="qOne-textarea"></textarea><br>
-
-  <label for="qTwo-textarea">What can this employee improve?</label><br>
-    <textarea name="qTwo" id="qTwo-textarea"></textarea><br>
-
-  <label for="rating-select">Overall Rating (Choose 1-5):</label><br>
-  <select name="rating" id="rating-select">
-    <option value="1">1 - Needs Improvement</option>
-    <option value="2">2 - Below Expectations </option>
-    <option value="3" selected>3 - Meets Expectations </option>
-    <option value="4">4 - Exceeds Expectations </option>
-    <option value="5">5 - Far Exceeds Expectations </option>
-  </select><br><br>
+  <div class="input-group mb-3">
+    <select class="form-select" id="inputGroupSelect02" name="employeeId">
+      <% self.employees.forEach(employee => { %>
+        <option value="<%= employee._id %>"><%= employee.eName %>
+        </option>
+        <% }) %>
+    </select>
+    <label class="input-group-text" for="inputGroupSelect02">Select Employee</label>
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">What is awesome about this employee?</label>
+    <input type="text" class="form-control" id="formGroupExampleInput">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">What can this employee improve?</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2">
+  </div>
+  <h2>Overall Rating (Choose 1-5):</h2>
+  <div class="input-group mb-3">
+    <select class="form-select" id="inputGroupSelect02">
+      <option selected>Choose...</option>
+      <option value="1">1 - Needs Improvement</option>
+      <option value="2">2 - Below Expectations</option>
+      <option value="3">3 - Meets Expectations</option>
+      <option value="4">4 - Exceeds Expectations</option>
+      <option value="5">5 - Far Exceeds Expectations</option>
+    </select>
+    <label class="input-group-text" for="inputGroupSelect02">Select Rating</label>
+  </div>
   <button type="submit">Submit Performance Review</button>
 </form>
-
 
 <%- include('../partials/footer') %>
