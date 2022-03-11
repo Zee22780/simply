@@ -5,7 +5,7 @@
   <div id="ee-details-container">
     
     <div class="heading">Start Date:</div>
-    <div><%= employee.startDate %></div>
+    <div><%= employee.startDate.toString().slice(0,15) %></div>
     <div class="heading">Title:</div>
     <div><%= employee.title %></div>
     <div class="heading">Department:</div>
@@ -15,11 +15,13 @@
     <hr>
     <h2 class="heading">Performance Review: </h2>
     <% employee.perfRev.forEach(review => { %>
-          <p>What is awesome about this employee?<%= review.qOne %></p>
-          <p>What can this employee improve?<%= review.qTwo %></p>
-          <p>Overall Rating (Choose 1-5):<%= review.rating %></p>
-          
-        <% }) %>
+      <p>What is awesome about this employee?</p>
+        <%= review.qOne %>
+      <p>What can this employee improve?</p>
+        <%= review.qTwo %>
+      <p>Overall Rating (Choose 1-5):</p>
+        <%= review.rating %>
+    <% }) %>
       </div>
     <a id="update-employee-link" href="/employees/<%= employee._id %>/edit">Update Employee</a>
 

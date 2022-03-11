@@ -13,7 +13,9 @@ const employeeSchema = new Schema({
     type: String,
     unique: true,
   },
-  startDate: Date,
+  startDate: {
+    type: Date
+  },
   title: String,
   department: String,
   location: String,
