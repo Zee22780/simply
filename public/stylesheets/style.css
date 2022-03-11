@@ -133,7 +133,43 @@ h1 {
 }
 
 /* NEW REVIEW PAGE */
+#performance-review-header {
+  font-size: 4rem;
+  text-align: center;
+}
 
+#add-review-form {
+  font-size: 2rem;
+  justify-content: center;
+  align-content: center;
+  margin: 0 200px 0 200px;
+}
 
+#submit-review-button {
+  font-size: 1.2rem;
+}
 
 /* EMPLOYEE SHOW PAGE */
+#employee-name {
+  font-size: 4rem;
+}
+
+#ee-details-container {
+  border: 2px dashed gainsboro;
+  justify-content: center;
+  align-content: center;
+  margin: 0 400px 0 400px;
+  padding: 20px;
+}
+
+#update-employee-link {
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  justify-content: center;
+  margin: 0 400px 0 400px;
+}
+
+.heading {
+  font-size: 2.5rem;
+}

@@ -1,37 +1,27 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
-  <h1><%= employee.eName %></h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Start Date</th>
-        <th>Title</th>
-        <th>Department</th>
-        <th>Location</th>
-        <th>Manager</th>
-        <th>Performance Review</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><%= employee.startDate %></td>
-          <td><%= employee.title %></td>
-          <td><%= employee.department %></td>
-          <td><%= employee.location %></td>
-
-          <% employee.perfRev.forEach(review => { %>
-            <p><%= review.qOne %>Question One</p>
-            <p><%= review.qTwo %></p>
-            <p><%= review.rating %></p>
-            
-          <% }) %>
-        </tr>
-    </tbody>
-  </table>
-</section>
-<a href="/employees/<%= employee._id %>/edit">Update Employee</a>
+  <h1 id="employee-name"><%= employee.eName %></h1>
+  <div id="ee-details-container">
+    
+    <div class="heading">Start Date:</div>
+    <div><%= employee.startDate %></div>
+    <div class="heading">Title:</div>
+    <div><%= employee.title %></div>
+    <div class="heading">Department:</div>
+    <div><%= employee.department %></div>
+    <div class="heading">Location:</div>
+    <div><%= employee.location %></div>
+    <hr>
+    <h2 class="heading">Performance Review: </h2>
+    <% employee.perfRev.forEach(review => { %>
+          <p>What is awesome about this employee?<%= review.qOne %></p>
+          <p>What can this employee improve?<%= review.qTwo %></p>
+          <p>Overall Rating (Choose 1-5):<%= review.rating %></p>
+          
+        <% }) %>
+      </div>
+    <a id="update-employee-link" href="/employees/<%= employee._id %>/edit">Update Employee</a>
 
 
 <%- include('../partials/footer') %>
