@@ -4,7 +4,7 @@ Simply is a simple performance management system designed for managers to track 
 
 ---
 ## Check Out Simply 
-Click here to explore the [Simply](https://https://simply-performance-review.herokuapp.com) web application.
+Click here to explore the [Simply](https://simply-performance-review.herokuapp.com) web application.
 
 A user (a manager) can log in and choose from any of the options on the nav bar where they can do any of the following:
 
