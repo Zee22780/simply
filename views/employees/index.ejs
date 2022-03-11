@@ -9,9 +9,13 @@
       <div class="card">
         <img class="placeholder-img" src="/images/placeholder-image-person-jpg.jpeg" class="card-img-top" alt="placeholder img">
       <a href="/employees/<%= employee._id %>"><%= employee.eName %></a>
+
+    <% if (user?.profile._id.equals(employee.owner)) { %>   
       <form method="POST" action="/employees/<%= employee._id %>?_method=DELETE">
         <button id="delete-button" type="submit">Delete This Employee</button>
       </form>
+    <% } %> 
+
     </div>
       <br>
     <% }) %> 
