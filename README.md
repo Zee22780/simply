@@ -18,6 +18,10 @@ The user can also view basic employee details from their profile page.
 ---
 ## Views
 ![Wireframe](images/../public/images/Initial%20Wireframe.png)
+
+![Profile View](public/images/Profile%20View.png)
+
+![All Employees View](images/../public/images/All%20Employees%20View.png)
 ---
 ## Technologies Used
 ![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
