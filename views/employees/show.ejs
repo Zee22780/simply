@@ -24,10 +24,12 @@
       <p>Overall Rating (Choose 1-5):</p>
         <%= review.rating %>
     <% }) %>
-      </div>
 
+      </div>
+    
+    <% if (user?.profile._id.equals(employee.owner._id)) { %>   
     <a id="update-employee-link" href="/employees/<%= employee._id %>/edit">Update Employee</a>
-  
+    <% } %> 
 
 <%- include('../partials/footer') %>
 
